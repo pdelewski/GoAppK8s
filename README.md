@@ -21,7 +21,7 @@ Push into local repo
 docker push localhost:5000/logwriter-app:v.01
 ```
 
-Set port forwarding on registry pod to 5000 (localhost:5000) by using k9s or kubectl command
+Set port forwarding on registry pod to 5000 (localhost:5000) by using k9s shift-f or kubectl command
 
 Create deployment
 
