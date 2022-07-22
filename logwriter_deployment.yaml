@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logwriter-app-deployment
+  labels:
+    app: logwriter-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logwriter-app
+  template:
+    metadata:
+      labels:
+        app: logwriter-app
+    spec:
+      nodeSelector:
+      containers:
+        - name: logwriter-app
+          image: localhost:5000/logwriter-app:v.01
+          imagePullPolicy: Always
