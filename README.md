@@ -25,7 +25,9 @@ Set port forwarding on registry pod to 5000 (localhost:5000) by using k9s shift-
 
 Create deployment
 
+```
 kubectl create -f logwriter_deployment.yaml
+```
 
 Check docker images by 
 ```
