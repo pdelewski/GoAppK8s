@@ -1,7 +1,7 @@
 # GoAppK8s
 Go app in k8s
 
-After creating Dockerfile run
+1. After creating Dockerfile run
 
 ```
 docker build -f Dockerfile -t logwriter-app:v.01 .
@@ -9,27 +9,27 @@ docker build -f Dockerfile -t logwriter-app:v.01 .
 
 This will create docker image and tag it according to parameter passed as -t switch
 
-Add tag to localhost 
+2. Add tag to localhost 
 
 ```
 docker tag logwriter-app:v.01 localhost:5000/logwriter-app:v.01
 ```
 
-Push into local repo
+3. Push into local repo
 
 ```
 docker push localhost:5000/logwriter-app:v.01
 ```
 
-Set port forwarding on registry pod to 5000 (localhost:5000) by using k9s shift-f or kubectl command
+4. Set port forwarding on registry pod to 5000 (localhost:5000) by using k9s shift-f or kubectl command
 
-Create deployment
+5. Create deployment
 
 ```
 kubectl create -f logwriter_deployment.yaml
 ```
 
-Check docker images by 
+6. Check docker images by 
 ```
 docker images
 ```
